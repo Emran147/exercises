@@ -1,0 +1,61 @@
+#spotcheck6{
+    background-color: red;
+    height: 150px;
+    width: 150px;
+}
+#b1{
+    background-color: red;
+    height: 150px;
+    width: 150px;
+}
+/* .box{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+    display: inline-block;
+  } */
+
+  .box{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    background-color: #8e44ad;
+    display: inline-block;
+  }
+
+  .item{
+    width: 100px;
+    margin: 10px;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 3px;
+    display: inline-block;
+    text-align:center;
+    font-weight: bold;
+    user-select: none;
+    cursor:pointer;
+  }
+  
+  [data-instock="false"]{
+    color: gray;
+    font-weight: normal;
+  }
+  
+  #cart{
+    margin: 10px;
+  }
+  .brown{
+    color: brown
+  }
+  
+  .green{
+    color: green
+  }
+  
+  .orange{
+    color: orange
+  }
+  
+  .yellow{
+    color: yellow
+  }

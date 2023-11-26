@@ -1,0 +1,49 @@
+
+ #chat{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 15fr 1fr;
+    grid-template-areas: 
+    "f c"
+    "f i";
+}
+
+#friends{
+    grid-area: f;
+    display: grid;
+    background-color: purple;
+}
+
+#chatbox{
+    grid-area: c;
+    display: grid;
+}
+
+#input{
+  
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+#friends-names{
+    opacity: 30%;
+    background-color: #eee;
+    height: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.text-container-right{
+    text-align: end;
+    margin: 5px;
+   
+}
+.text-container-left{
+    margin: 5px;
+    display: inline-flex;
+}
+#button{
+    background-color: blueviolet;
+    text-align: center;
+
+}

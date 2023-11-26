@@ -1,0 +1,52 @@
+
+div {
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+  }
+
+
+  .nav-bar {
+    position: fixed;
+    background-color: #150f3f;
+   
+
+ }
+
+
+  h1 {
+    font-family: "Helvetica";
+  }
+
+
+  ul {
+    color: red;
+  }
+
+  .heading {
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  
+  .tomato {
+    color: tomato;
+  }
+  
+  .gross-color {
+    color: #a3c010;
+  }
+  
+  .nice-color {
+    color: #03bbbb;
+  }
+
+  #about-me {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  span {
+    height: 50px;
+    width: 50px;
+    background-color: #8e44ad;
+    display: inline-block;
+  }

@@ -1,0 +1,30 @@
+#main-container{
+    display: grid;
+     grid-template-columns: 30% 70% ;
+     height: 500px;
+     width: 500px;
+ 
+ 
+}
+
+#side-bar{
+    background-color: purple;
+
+}
+#chat-bar{
+    background-color: gray;
+    display: grid;
+    grid-template-rows: 10% 10%  10% 10%  10% 10%  10% 10%  10% 10%  ;
+
+   
+}
+
+#side-bar-child{
+   background-color: #eee;
+   height: 20px;
+   opacity: 20%;
+   margin-top: 50px;
+   margin-left: 5px;
+   margin-right: 5px;
+
+}
