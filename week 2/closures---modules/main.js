@@ -26,7 +26,7 @@
 
 // const Bank = function (){
 //   let money = 500 ;
-// const depositCash = function(mount){
+//  const depositCash = function(mount){
 //   money+=mount
 // }
 // const checkBalance = function(){

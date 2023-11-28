@@ -23,6 +23,9 @@
 
 //   getTime(returnTime)
 
+
+
+
 //3 ??????
 
 // const displayData = function (alertDataFunc, logDataFunc, data) {
@@ -39,7 +42,7 @@
 
 //4
 
-//const sumOfThreeNum = (num1,num2,num3) => num1+num2+num3
+// const sumOfThreeNum = (num1,num2,num3) => num1+num2+num3
 
 
 
@@ -74,20 +77,20 @@
 
 //7
 
-// const explode = (lightFunc, soundFunc, sound) => {
-//     lightFunc()
-//     soundFunc(sound)
-//   }
+const explode = (lightFunc, soundFunc, sound) => {
+    lightFunc()
+    soundFunc(sound)
+  }
       
-//   const shineLight = () =>{
-//     document.getElementById("box").style.backgroundColor = "yellow"
-//     document.getElementById("box").style.height = "150px"
-//     document.getElementById("box").style.width = "150px"
-//   } 
+  const shineLight = () =>{
+    document.getElementById("box").style.backgroundColor = "yellow"
+    document.getElementById("box").style.height = "150px"
+    document.getElementById("box").style.width = "150px"
+  } 
       
-//   const makeSound = sound => alert(sound)
+  const makeSound = sound => alert(sound)
       
-//   explode(shineLight, makeSound, "BOOM")
+  explode(shineLight, makeSound, "BOOM")
 
 
 
