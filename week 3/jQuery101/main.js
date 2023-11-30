@@ -79,7 +79,7 @@
 // })
 
 
-///                 Creating & Adding/Removing
+///                                                                                 Creating & Adding/Removing
 
 // const aDynamicDiv = "<div class='mine'>Oh yes</div>"
 // const elem = $(aDynamicDiv)
@@ -87,7 +87,7 @@
 // console.log(elem)
 
  
-//            add anything to existing elements
+//                                                                                       add anything to existing elements
 // this is should be in htl - > <div class="fruits"></div>
 // $('.fruits').append('<p class="red">Raspberry</p>')
 // $('.fruits').append('<p class="brown">Kiwi</p>')

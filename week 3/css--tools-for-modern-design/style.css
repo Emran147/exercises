@@ -1,0 +1,20 @@
+text{
+    font-family: 'Montserrat', sans-serif;
+}
+.text{
+    background-color: #f39c12;
+    max-width:500px;
+    min-height: 50px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  @media(max-width: 768px){
+    input{
+      display: block;
+    }
+  }
+  @media (max-width: 700px){
+    .column{
+      width: 100%;
+    }
+  }
