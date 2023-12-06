@@ -87,66 +87,34 @@ class Principal  extends Person{
 
 }
 
-// const p1 = new Principal("Martin", 1991)
-// const p2 = new Principal("Martha", 1990)
+const p1 = new Principal("Martin", 1991)
+const p2 = new Principal("Martha", 1990)
 
-// const t1 = new Teacher("Cassandra", 2002, 40000)
-// const t2 = new Teacher("Kevin", 2006, 30000)
+const t1 = new Teacher("Cassandra", 2002, 40000)
+const t2 = new Teacher("Kevin", 2006, 30000)
 
-// const s1 = new Student("Ronda", 2017)
-// const s2 = new Student("Byron", 2016)
+const s1 = new Student("Ronda", 2017)
+const s2 = new Student("Byron", 2016)
 
-// //1 & 2
-// p1.hireTeacher(t1) //should print "Martin just hired Cassandra"
-// console.log(p1.teachers) //should print Array(1) [Teacher] - the teacher should be Cassandra
-
-
-
-// p1.hireTeacher(t2) //should print "Martin just hired Kevin"
-// console.log(p1.teachers) //should print Array(2) [Teacher, Teacher]
+//1 & 2
+p1.hireTeacher(t1) //should print "Martin just hired Cassandra"
+console.log(p1.teachers) //should print Array(1) [Teacher] - the teacher should be Cassandra
 
 
-// p1.recruitStudent(s1)
-// p1.recruitStudent(s2)
-// console.log(p1.students) //should print Array(2) [Student, Student]
 
-// p1.expelStudent(s1)
-// console.log(p1.students) //should print Array(1) [Student] - the student should be Byron
+p1.hireTeacher(t2) //should print "Martin just hired Kevin"
+console.log(p1.teachers) //should print Array(2) [Teacher, Teacher]
 
 
-// p1.transferStudent(s2, p2)
-// console.log(p1.students) //should print Array(0) []
-// console.log(p2.students) //should print Array(1) [Student] - the student should be Byron
+p1.recruitStudent(s1)
+p1.recruitStudent(s2)
+console.log(p1.students) //should print Array(2) [Student, Student]
 
-class APIManager{
-    constructor(route){
-        this.route = route
-        this.data = {}
-    }
+p1.expelStudent(s1)
+console.log(p1.students) //should print Array(1) [Student] - the student should be Byron
 
-    fetch(){
-        $.get(this.route, function(response){
-            this.data = response
-        })
-    }
-}
 
-class Renderer{
-    construcor(scriptID, containerID, apiManager){
-        this.scriptID = scriptID
-        this.containerID = containerID
-        this.apiManager = apiManager
-    }
+p1.transferStudent(s2, p2)
+console.log(p1.students) //should print Array(0) []
+console.log(p2.students) //should print Array(1) [Student] - the student should be Byron
 
-    render(){    
-        let source = $("#" + this.scriptID).html()
-        let template = Handlebars.compile(source)
-        $("#" + this.containerID).append(template(this.apiManager.data))
-    }
-}
-
-const foodApi = new APIManager("/foodRoute")
-const renderer = new Renderer("food-template", "container", foodApi)
-
-foodApi.fetch()
-renderer.render()

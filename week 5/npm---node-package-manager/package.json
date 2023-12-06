@@ -1,0 +1,17 @@
+{
+  "name": "npm---node-package-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "time.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "handlebars": "^4.7.8",
+    "jquery": "^3.7.1",
+    "moment": "^2.29.4"
+  }
+}
