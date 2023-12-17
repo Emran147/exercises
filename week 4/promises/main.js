@@ -93,6 +93,7 @@
 //   }
 
 
+<<<<<<< HEAD
 // class APIManager {
 //     fetch() {
 //         return $.get('/data')
@@ -119,5 +120,31 @@
 // })
 
 
+=======
+class APIManager {
+    fetch() {
+        return $.get('/data')
+    }
+}
+
+class Renderer {
+    render(dataPromise) {
+        dataPromise.then(function (data) {
+            $("#body").append(`<div>${data}</div>`)
+        })
+    }
+}
+
+const apiManager = new APIManager()
+const renderer = new Renderer()
+
+let initialDataPromise = apiManager.fetch()
+renderer.render(initialDataPromise) //initial page load
+
+$(".some-thing").on("click", function () {
+    let newDataPromise = apiManager.fetch()
+    renderer.render(newDataPromise)
+})
+>>>>>>> b92e2013ffcb2268815f8e6de00c5c345b31b6bb
 
 

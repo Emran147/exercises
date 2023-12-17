@@ -1,0 +1,11 @@
+.container{
+    position: absolute;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 20%;
+}
+.title{
+    margin: 2%;
+}

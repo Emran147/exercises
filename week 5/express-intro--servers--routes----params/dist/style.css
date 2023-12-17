@@ -1,0 +1,14 @@
+.mainDiv{
+    position: absolute;
+    width: 50%;
+    height: 30%;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+#btncss{
+    display: block;
+    
+}
