@@ -1,0 +1,148 @@
+db.firstCollection.find({})
+
+db.firstCollection.insert({name: "You"})
+
+db.firstCollection.find({})
+
+
+db.firstCollection.insert({
+    name: "Razu",
+    hometown: {
+        city: "Razuville",
+        country: "Razuland"
+    },
+    hobbies: ["Razu-ing", "Razu Surfing", "Razu Cooking"]
+})
+
+
+db.firstCollection.insert({
+    _id: 99143,
+    name: "Shoobert"
+})
+
+
+
+db.myOwnDoc.insert({
+
+    currentBalance : 123 , 
+    accountDetails : {
+        fullName : "Emran Moeen Qedan",
+        accountNumber : 321
+    }
+})
+
+
+db.myOwnDoc.remove({
+    currentBalance: 123
+},true)
+
+
+db.myOwnDoc.find({})
+
+
+
+db.firstCollection.insert({ name: "Louise", salary: 1200 })
+db.firstCollection.insert({ name: "Rayna", salary: 2300 })
+db.firstCollection.insert({ name: "Soren", salary: 1500 })
+db.firstCollection.insert({ name: "Loreli", salary: 800 })
+db.firstCollection.insert({ name: "Milo", salary: 950 })
+db.firstCollection.insert({ name: "Brendon", salary: 1100 })
+
+
+db.firstCollection.find({})
+
+db.firstCollection.find({
+    name: "Milo"
+})
+
+db.firstCollection.find({
+    salary:{
+        $gt: 1200
+    }
+})
+
+
+db.firstCollection.find(    //query starts here
+    {                       //filter starts here
+        salary: {
+            $gt: 1200
+        }
+    },                      //filter ends here
+    {                       //projection starts here
+        name: 1,
+        _id: 0
+    }                       //projection ends here
+)                           //query ends here
+
+db.firstCollection.find(
+    {
+        name: "Razu"
+    },
+    {
+        "hometown.city": "1" //notice the dot notation - when we do this, we have to wrap the key in quotes
+    }
+)
+
+//adding last name to some exist document 
+db.firstCollection.update(
+    {
+        name: "Milo"
+    },
+    {
+        $set:
+            {
+                lastName: "Shakers"
+            }
+    }
+)
+
+
+db.firstCollection.find(    
+    {                       
+        "name": "Loreli"
+    },                      
+    {                       
+        name: 1,
+        "salary": 1
+    }                       
+)    
+
+db.firstCollection.update(
+    {                       
+        "name": "Loreli"
+    },
+    {
+    $set:
+    {
+      salary: 1050
+    }
+    }
+
+)
+
+
+db.firstCollection.insert({name: "Spore", hobbies: ["Running", "Hip Hop", "Basketball", "Soccer"]})
+db.firstCollection.insert({name: "Daniel", hobbies: ["Hip Hop", "Ballet", "Salsa", "Running"]})
+db.firstCollection.insert({name: "Beckie", hobbies: ["Reading", "Running", "Hip Hop", "Writing", "Debate", "Philosophy"]})
+db.firstCollection.insert({name: "Dugg", hobbies: ["Philosophy", "Psychology"]})
+
+db.firstCollection.find({
+    hobbies: "Philosophy"
+})
+
+
+db.firstCollection.count({
+    salary:{
+        $gt: 1200
+    }
+})
+
+db.firstCollection.find({})
+
+db.firstCollection.find({
+    salary:{
+        $gt: 200
+    }
+}).limit(2)
+
+db.firstCollection.find({}).sort({salary: -1}).limit(3)
