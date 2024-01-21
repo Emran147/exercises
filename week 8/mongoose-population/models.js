@@ -80,19 +80,19 @@ let r3 = new Review({
 // })
 
 
-// Book.findOne({})
-//     .populate(
-//       {
-//         path: 'reviews',
-//         populate: {
-//             path: 'critic'
-//         }
-//       }
-//     )
-//     .exec()
-//     .then(book => {
-//         console.log(book.reviews);
-//     })
+Book.findOne({})
+    .populate(
+      {
+        path: 'reviews',
+        populate: {
+            path: 'critic'
+        }
+      }
+    )
+    .exec()
+    .then(book => {
+        console.log(book.reviews);
+    })
 
 // Review.findOne({})
 //     .populate('book critic')    

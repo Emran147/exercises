@@ -68,31 +68,33 @@ let visitor2 = new Visitor({
 
 //Find a visitor’s list of visited planets
 
-// Visitor.findOne({})
-//     .populate('visitedPlanets homePlanet')
-//     .exec()
-//     .then(planet => {
-//         console.log(planet)
-//     })
+Visitor.findOne({})
+    .populate('visitedPlanets homePlanet')
+    .exec()
+    .then(planet => {
+        console.log(planet)
+    })
+
+// Visitor.findOne({}).then(planet => {
+//       console.log(planet)
+//   })
 
 //Find all the visitors on a planet
 //Planet.findOne({}).populate('visitors').exec().then(vistiors => console.log(vistiors))
 
 //Find all the visitors in a system (subdocuments!)
-// System.findOne({})
-//     .populate(
-//       {
-//         path: 'planets',
-//         populate: {
-//             path: 'visitors',
-//             populate: {
-//                 path: 'name',
-               
-//             }
-//         }
-//       }
-//     )
-//     .exec()
-//     .then(system => {
-//         console.log(system);
-//     })
+System.findOne({})
+    .populate(
+      {
+        path: 'planets',
+        populate: {
+            path: 'visitors',
+        }
+      }
+    )
+    .exec()
+    .then(system => {
+        console.log(system);
+    })
+
+
